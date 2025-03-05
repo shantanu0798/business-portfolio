@@ -26,9 +26,9 @@ const Footer = () => {
           
           <div className="footer-contact">
             <h3>Contact Info</h3>
-            <p><i className="fas fa-map-marker-alt"></i> San Francisco, CA</p>
-            <p><i className="fas fa-envelope"></i> contact@yourportfolio.com</p>
-            <p><i className="fas fa-phone-alt"></i> +1 (555) 123-4567</p>
+            <p><i className="fas fa-map-marker-alt"></i> Vancouver, BC</p>
+            <p><i className="fas fa-envelope"></i> kritisahni0912@gmail.com</p>
+            <p><i className="fas fa-phone-alt"></i> +1 (778) 319-4470</p>
           </div>
         </div>
         

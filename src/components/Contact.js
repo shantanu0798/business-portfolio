@@ -57,7 +57,7 @@ const Contact = () => {
               </div>
               <div className="contact-card-content">
                 <h3>Location</h3>
-                <p>San Francisco, CA</p>
+                <p>Vancouver, BC</p>
               </div>
             </div>
             
@@ -67,7 +67,7 @@ const Contact = () => {
               </div>
               <div className="contact-card-content">
                 <h3>Email</h3>
-                <p>contact@yourportfolio.com</p>
+                <p>kritisahni0912@gmail.com</p>
               </div>
             </div>
             
@@ -77,14 +77,14 @@ const Contact = () => {
               </div>
               <div className="contact-card-content">
                 <h3>Phone</h3>
-                <p>+1 (555) 123-4567</p>
+                <p>+1 (778) 319-4470</p>
               </div>
             </div>
             
             <div className="social-links">
               <h3>Connect With Me</h3>
               <div className="social-icons">
-                <a href="#" className="social-icon">
+                <a href="https://www.linkedin.com/in/kritisahni/" className="social-icon">
                   <i className="fab fa-linkedin-in"></i>
                 </a>
                 <a href="#" className="social-icon">

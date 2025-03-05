@@ -12,12 +12,12 @@ const Hero = () => {
           <div className="hero-columns">
             <div className="hero-column">
               <p className="hero-text">
-                I'm currently orchestrating experiences at Hero Digital for a leading tech company headquartered in Cupertino, California.
+              I’m currently elevating digital experiences at lululemon by ensuring brand consistency and guest satisfaction through cross-functional collaboration.
               </p>
             </div>
             <div className="hero-column">
               <p className="hero-text">
-                I'm a passionate analyst who uses research, data, and thoughtful design to create impactful marketing strategies that scale.
+              I’m a passionate educator who leverages data, research, and thoughtful design to create impactful engagement strategies that scale.
               </p>
               <a href="#contact" className="cta-button">
                 GET IN TOUCH <span className="arrow">→</span>
