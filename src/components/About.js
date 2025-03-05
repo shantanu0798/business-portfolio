@@ -10,7 +10,7 @@ const About = () => {
           <div className="about-image">
             <div className="image-container">
               <img 
-                src={`${process.env.PUBLIC_URL}/IMG_3736.jpeg`} 
+                src="https://raw.githubusercontent.com/shantanu0798/business-portfolio/main/public/IMG_3736.jpeg" 
                 alt="Professional headshot" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
