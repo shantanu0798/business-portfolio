@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/About.css';
-import profileImage from '../assets/IMG_3736.jpeg';
 
 const About = () => {
   return (
@@ -10,7 +9,11 @@ const About = () => {
         <div className="about-content">
           <div className="about-image">
             <div className="image-container">
-              <img src={profileImage} alt="Professional headshot" />
+              <img 
+                src={`${process.env.PUBLIC_URL}/IMG_3736.jpeg`} 
+                alt="Professional headshot" 
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
             </div>
           </div>
           <div className="about-text">
