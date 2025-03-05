@@ -140,10 +140,78 @@
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
-    gap: 40px;
+    gap: 30px; /* Reduced from 40px */
+  }
+  
+  .contact-info {
+    width: 90%; /* Limit width */
+    margin: 0 auto; /* Center the info cards */
+  }
+  
+  .contact-card {
+    padding: 20px; /* Reduced padding */
+  }
+  
+  .contact-card-icon {
+    width: 40px; /* Smaller icon */
+    height: 40px;
+  }
+  
+  .contact-card-content h3 {
+    font-size: 1.1rem; /* Smaller heading */
+  }
+  
+  .contact-card-content p {
+    font-size: 0.9rem; /* Smaller text */
+  }
+  
+  .social-links h3 {
+    font-size: 1.1rem; /* Smaller heading */
+    text-align: center; /* Center align */
+  }
+  
+  .social-icons {
+    justify-content: center; /* Center the icons */
   }
   
   .contact-form-container {
-    padding: 30px;
+    padding: 25px; /* Reduced padding */
+    width: 90%; /* Limit width */
+    margin: 0 auto; /* Center the form */
+  }
+  
+  .form-group label {
+    font-size: 0.9rem; /* Smaller label */
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px; /* Reduced padding */
+    font-size: 0.9rem; /* Smaller text */
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 15px; /* Further reduced padding */
+  }
+  
+  .contact-card-icon {
+    width: 35px; /* Even smaller icon */
+    height: 35px;
+  }
+  
+  .contact-form-container {
+    padding: 20px; /* Further reduced padding */
+  }
+  
+  .form-group {
+    margin-bottom: 15px; /* Reduced margin */
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 8px; /* Further reduced padding */
   }
 }

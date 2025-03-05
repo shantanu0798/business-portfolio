@@ -156,18 +156,98 @@
 @media (max-width: 768px) {
   .experience-container {
     flex-direction: column;
-    gap: 50px;
+    gap: 40px; /* Reduced from 50px */
+  }
+  
+  .section-subtitle {
+    font-size: 1.3rem; /* Smaller subtitle */
+    display: block;
+    text-align: center;
+    margin: 0 auto 30px auto;
+  }
+  
+  .section-subtitle::after {
+    left: 50%; /* Center the underline */
+    transform: translateX(-50%);
+  }
+  
+  .timeline {
+    padding-left: 25px; /* Reduced padding */
+  }
+  
+  .timeline-dot {
+    left: -34px; /* Adjusted position */
+    width: 16px; /* Smaller dot */
+    height: 16px;
   }
   
   .timeline-content {
-    padding: 20px;
+    padding: 15px; /* Reduced padding */
   }
   
   .timeline-content h4 {
-    font-size: 1.2rem;
+    font-size: 1.1rem; /* Smaller heading */
   }
   
   .timeline-content h5 {
-    font-size: 1rem;
+    font-size: 0.95rem; /* Smaller subheading */
+  }
+  
+  .timeline-content .period {
+    font-size: 0.85rem; /* Smaller period text */
+  }
+  
+  .timeline-content ul {
+    padding-left: 15px; /* Reduced padding */
+  }
+  
+  .timeline-content ul li {
+    font-size: 0.9rem; /* Smaller list text */
+    margin-bottom: 6px; /* Reduced margin */
+  }
+  
+  .certification-item {
+    padding: 12px; /* Reduced padding */
+  }
+  
+  .certification-icon {
+    width: 35px; /* Smaller icon */
+    height: 35px;
+  }
+  
+  .certification-info h4 {
+    font-size: 1rem; /* Smaller heading */
+  }
+  
+  .certification-info p {
+    font-size: 0.85rem; /* Smaller text */
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .timeline-content {
+    padding: 12px; /* Further reduced padding */
+  }
+  
+  .timeline-content h4 {
+    font-size: 1rem; /* Even smaller heading */
+  }
+  
+  .timeline-content h5 {
+    font-size: 0.9rem; /* Even smaller subheading */
+  }
+  
+  .timeline-content ul li {
+    font-size: 0.85rem; /* Even smaller list text */
+  }
+  
+  .certification-item {
+    padding: 10px; /* Further reduced padding */
+  }
+  
+  .certification-icon {
+    width: 30px; /* Even smaller icon */
+    height: 30px;
   }
 }

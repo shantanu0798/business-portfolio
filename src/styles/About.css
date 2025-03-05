@@ -116,11 +116,52 @@
   }
   
   .about-image {
-    width: 80%;
+    width: 60%; /* Reduced from 80% to 60% for better mobile display */
     margin: 0 auto;
+  }
+  
+  .image-container {
+    max-height: 300px; /* Limit height on mobile */
+    overflow: hidden;
   }
   
   .image-container::before {
     display: none;
+  }
+  
+  .about-text h3 {
+    font-size: 1.5rem; /* Smaller heading on mobile */
+    text-align: center; /* Center align heading on mobile */
+  }
+  
+  .about-text p {
+    font-size: 1rem; /* Slightly smaller text on mobile */
+    text-align: center; /* Center align text on mobile */
+  }
+  
+  .skills h4 {
+    text-align: center; /* Center align skills heading on mobile */
+  }
+  
+  .skill-name {
+    text-align: center; /* Center align skill names on mobile */
+  }
+  
+  .btn {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .about-image {
+    width: 80%; /* Back to 80% for very small screens */
+  }
+  
+  .about-text h3 {
+    font-size: 1.3rem; /* Even smaller heading on small mobile */
   }
 }

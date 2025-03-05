@@ -167,7 +167,8 @@
 /* Media Queries */
 @media (max-width: 992px) {
   .headline {
-    font-size: 5rem;
+    font-size: 4.5rem; /* Reduced from 5rem */
+    text-align: center; /* Center align on tablets */
   }
 
   .hero-columns {
@@ -178,23 +179,65 @@
     width: 100%;
     margin-bottom: 30px;
   }
+  
+  .hero-text {
+    text-align: center; /* Center align text on tablets */
+    margin: 0 auto; /* Center the text block */
+  }
+  
+  .cta-button {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
   .headline {
-    font-size: 3.5rem;
+    font-size: 2.8rem; /* Reduced from 3.5rem for better mobile display */
+    letter-spacing: -1px; /* Reduced letter spacing on mobile */
   }
 
   .hero {
-    padding: 40px 0;
+    padding: 30px 0; /* Reduced padding */
+    min-height: 90vh; /* Slightly reduced height */
+  }
+  
+  .hero-text {
+    font-size: 0.9rem; /* Smaller text on mobile */
   }
 
   .skill-tags {
-    gap: 15px;
+    gap: 10px;
+    padding: 15px 10px; /* Reduced padding */
+    margin-top: 40px; /* Reduced top margin */
   }
 
   .skill-tag {
-    font-size: 0.7rem;
-    padding: 8px 12px;
+    font-size: 0.65rem; /* Smaller font */
+    padding: 6px 10px; /* Reduced padding */
+    border-radius: 20px; /* Slightly smaller radius */
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .headline {
+    font-size: 2.2rem; /* Even smaller for very small screens */
+  }
+  
+  .grid-background {
+    background-size: 30px 30px; /* Smaller grid on mobile */
+  }
+  
+  .skill-tags {
+    flex-direction: column; /* Stack skill tags on very small screens */
+    align-items: stretch;
+  }
+  
+  .skill-tag {
+    text-align: center;
+    margin: 0 20px; /* Add horizontal margin */
   }
 }
