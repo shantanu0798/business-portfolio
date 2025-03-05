@@ -3,27 +3,37 @@ import '../styles/Hero.css';
 
 const Hero = () => {
   return (
-    <section id="home" className="hero">
-      <div className="hero-overlay"></div>
-      <div className="container hero-container">
+    <section className="hero">
+      <div className="grid-background"></div>
+      <div className="container">
         <div className="hero-content">
-          <h1>Welcome to My Portfolio</h1>
-          <p className="hero-subtitle">Professional Marketing Specialist</p>
-          <p className="hero-description">
-            I create impactful marketing strategies that drive results and help businesses grow.
-          </p>
-          <div className="hero-buttons">
-            <a href="#portfolio" className="btn">View My Work</a>
-            <a href="#contact" className="btn btn-secondary">Contact Me</a>
+          <h1 className="headline">Marketing Research Analyst and Designer</h1>
+          
+          <div className="hero-columns">
+            <div className="hero-column">
+              <p className="hero-text">
+                I'm currently orchestrating experiences at Hero Digital for a leading tech company headquartered in Cupertino, California.
+              </p>
+            </div>
+            <div className="hero-column">
+              <p className="hero-text">
+                I'm a passionate analyst who uses research, data, and thoughtful design to create impactful marketing strategies that scale.
+              </p>
+              <a href="#contact" className="cta-button">
+                GET IN TOUCH <span className="arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="skill-tags">
+            <div className="skill-tag strategy">MARKET RESEARCH ® '23</div>
+            <div className="skill-tag research">USER EXPERIENCE RESEARCH ℠</div>
+            <div className="skill-tag design">DATA ANALYTICS ©</div>
+            <div className="skill-tag branding">BRANDING & IDENTITY © '22</div>
+            <div className="skill-tag">CONSUMER INSIGHTS ™</div>
+            <div className="skill-tag">MARKETING STRATEGY →</div>
           </div>
         </div>
-      </div>
-      <div className="scroll-down">
-        <a href="#about">
-          <span></span>
-          <span></span>
-          <span></span>
-        </a>
       </div>
     </section>
   );

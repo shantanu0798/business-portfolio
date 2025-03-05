@@ -9,18 +9,65 @@
   --primary-color: #0066cc;
   --secondary-color: #333;
   --accent-color: #ff6b00;
-  --light-color: #f4f4f4;
+  --light-color: #bbb;
   --dark-color: #222;
   --text-color: #333;
   --text-light: #777;
   --transition: all 0.3s ease;
+  --main-bg-color: #000000;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--light-color);
+  background-color: var(--main-bg-color);
+}
+
+/* Override text color for all sections except hero */
+section:not(.hero) {
+  color: var(--light-color);
+  background-color: var(--main-bg-color);
+}
+
+section:not(.hero) h1,
+section:not(.hero) h3,
+section:not(.hero) h6 {
+  color: #ffffff; /* White color for better visibility on dark background */
+  opacity: 1; /* Ensure full opacity */
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.6); /* Add text shadow for better visibility */
+  font-weight: 600; /* Make text semi-bold */
+}
+
+/* Exclude timeline-content elements from the global text color changes */
+section:not(.hero) .timeline-content h4,
+section:not(.hero) .timeline-content h5,
+section:not(.hero) .timeline-content p,
+section:not(.hero) .certification-item h4,
+section:not(.hero) .certification-item p {
+  color: #000; /* Black color for timeline content */
+  text-shadow: none; /* Remove text shadow */
+}
+
+section:not(.hero) h4:not(.timeline-content h4):not(.certification-item h4),
+section:not(.hero) h5:not(.timeline-content h5) {
+  color: #ffffff; /* White color for other h4 and h5 elements */
+  opacity: 1; /* Ensure full opacity */
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.6); /* Add text shadow for better visibility */
+  font-weight: 600; /* Make text semi-bold */
+}
+
+section:not(.hero) p {
+  color: #ffffff; /* White color for paragraph text */
+  opacity: 0.9; /* Slightly reduced opacity for visual hierarchy */
+}
+
+section:not(.hero) h2 {
+  color: #ffffff; /* Bright white color for section headings */
+  opacity: 1; /* Ensure full opacity */
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.8); /* Enhanced text shadow for better visibility */
+  font-weight: 800; /* Make text extra bold */
+  letter-spacing: 0.5px; /* Add slight letter spacing for better readability */
 }
 
 .container {

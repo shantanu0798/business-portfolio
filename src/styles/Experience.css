@@ -1,5 +1,5 @@
 .experience {
-  background-color: var(--light-color);
+  background-color: var(--main-bg-color);
 }
 
 .experience-container {
@@ -89,7 +89,7 @@
 
 .timeline-content .period {
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: #000; /* Darken period text */
   margin-bottom: 15px;
   font-style: italic;
 }
@@ -100,6 +100,7 @@
 
 .timeline-content ul li {
   margin-bottom: 8px;
+  color: #000; /* Darken description text */
 }
 
 .certifications-title {

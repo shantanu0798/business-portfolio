@@ -21,7 +21,7 @@ const About = () => {
               I specialize in developing comprehensive marketing strategies, content creation, social media management, and analytics. My work has helped clients increase their online presence, generate quality leads, and improve conversion rates.
             </p>
             <div className="skills">
-              <h4>My Skills</h4>
+              <h3>My Skills</h3>
               <div className="skill-bars">
                 <div className="skill">
                   <span className="skill-name">Digital Marketing</span>

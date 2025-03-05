@@ -20,7 +20,10 @@
 .footer-logo h2 {
   font-size: 2rem;
   margin-bottom: 15px;
-  color: white;
+  color: #ffffff;
+  opacity: 1;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  font-weight: 700;
 }
 
 .footer-logo p {
