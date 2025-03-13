@@ -23,27 +23,43 @@ const Contact = () => {
     }));
   };
   
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Simulate form submission
-    setFormStatus({
-      submitted: true,
-      success: true,
-      message: 'Thank you for your message! I will get back to you soon.'
-    });
-    
-    // Reset form after submission
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-    
-    // In a real application, you would send the form data to a server here
+    setFormStatus({ ...formStatus, submitted: true }); // Set submitted to true immediately
+
+    try {
+      const response = await fetch('https://0rr9x9qsx4.execute-api.us-east-2.amazonaws.com/prod/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setFormStatus({
+          submitted: true,
+          success: true,
+          message: 'Thank you for your message! I will get back to you soon.',
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' }); // Reset form on success
+      } else {
+        const errorData = await response.json(); // Try to parse error response
+        setFormStatus({
+          submitted: true,
+          success: false,
+          message: `Submission failed: ${errorData.message || 'Something went wrong.'}`,
+        });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setFormStatus({
+        submitted: true,
+        success: false,
+        message: 'Submission failed: Could not connect to server.',
+      });
+    }
   };
-  
   return (
     <section id="contact" className="contact">
       <div className="container">
