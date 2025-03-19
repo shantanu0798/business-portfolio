@@ -28,7 +28,7 @@ const Contact = () => {
     setFormStatus({ ...formStatus, submitted: true }); // Set submitted to true immediately
 
     try {
-      const response = await fetch('https://0rr9x9qsx4.execute-api.us-east-2.amazonaws.com/prod/contact', {
+      const response = await fetch('https://sv01koiqp0.execute-api.us-east-2.amazonaws.com/Prod/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -3,6 +3,18 @@ const ses = new AWS.SES({ region: 'us-east-2' });
 const dynamoDB = new AWS.DynamoDB.DocumentClient({ region: 'us-east-2' });
 
 exports.handler = async (event) => {
+  if (event.httpMethod === 'OPTIONS') {
+    return {
+      statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,POST",
+        "Access-Control-Allow-Headers": "Content-Type",
+      },
+      body: '', // No body for OPTIONS requests
+    };
+  }
+
   try {
     const formData = JSON.parse(event.body);
     const { name, email, subject, message } = formData;
@@ -12,6 +24,11 @@ exports.handler = async (event) => {
       return {
         statusCode: 400,
         body: JSON.stringify({ message: 'All fields are required' }),
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "OPTIONS,POST",
+          "Access-Control-Allow-Headers": "Content-Type",
+        },
       };
     }
 
@@ -59,6 +76,11 @@ exports.handler = async (event) => {
 
     return {
       statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,POST",
+        "Access-Control-Allow-Headers": "Content-Type",
+      },
       body: JSON.stringify({ message: 'Message sent successfully!' }),
     };
 
@@ -66,6 +88,11 @@ exports.handler = async (event) => {
     console.error('Error:', error);
     return {
       statusCode: 500,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "OPTIONS,POST",
+        "Access-Control-Allow-Headers": "Content-Type",
+      },
       body: JSON.stringify({ message: 'Error sending message' }),
     };
   }
